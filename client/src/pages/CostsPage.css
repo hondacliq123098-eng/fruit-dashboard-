@@ -1,0 +1,182 @@
+.costs-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cost-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+textarea {
+  padding: 0.625rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.costs-summary {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.costs-summary h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.25rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.summary-card {
+  padding: 1.25rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  border-left: 4px solid #10b981;
+  transition: all 0.2s;
+}
+
+.summary-card:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+.summary-card h4 {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.summary-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.summary-count {
+  font-size: 0.8125rem;
+  color: #64748b;
+}
+
+.filter-section {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-width: 200px;
+}
+
+.filter-box select {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #1f2937;
+  background: transparent;
+  cursor: pointer;
+}
+
+.total-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  border-radius: 12px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.type-badge.raw-material {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.type-badge.labour {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.type-badge.electricity {
+  background: #fce7f3;
+  color: #831843;
+}
+
+.type-badge.rent {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.type-badge.transport {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.description-cell {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-section {
+    flex-direction: column;
+  }
+
+  .filter-box {
+    width: 100%;
+  }
+
+  .cost-form {
+    grid-template-columns: 1fr;
+  }
+}
